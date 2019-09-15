@@ -1,30 +1,41 @@
 
 export const initialState = {
-    items : [],
+    items: [],
     item: {},
-    singleUser : {}
+    singleUser: {},
+    updateUser: {},
+    deleteUser: {}
 }
-export default function (state = initialState, action){
-    if(action.type === 'SET_VALUE'){
+export default function (state = initialState, action) {
+    if (action.type === 'SET_VALUE') {
         return {
             ...state,
-            items : action.payload
+            items: action.payload
         }
     }
-    else if (action.type === 'CREATE_VALUE'){
+    else if (action.type === 'CREATE_VALUE') {
         return {
             ...state,
-            item : action.payload
+            item: action.payload
         }
     }
-    else if (action.type === 'SINGLE_USER'){
+    else if (action.type === 'SINGLE_USER') {
         return {
             ...state,
-            singleUser : action.payload
+            singleUser: action.payload
         }
     }
-   
+    else if (action.type === 'UPDATE_VALUE') {
+        return {
+            ...state,
+            updateUser: action.payload
+        }
+    }
+    else if (action.type === 'DELETE_VALUE') {
+        return {
+            ...state,
+            deleteUser: action.payload
+        }
+    }
     return state;
-
-
 }

@@ -1,23 +1,15 @@
-import React, {Component} from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
 import List from './List';
-import AddUser from './AddUser';
 
 class App extends Component {
-  
- 
-  render(){
+  render() {
     return (
       <div className="App">
-      <h1 align = 'center'>My Application</h1>
-     
-      <List />
-     
+        <h1 align='center'>My Application</h1>
+        <List />
       </div>
     );
   }
- 
 }
-
 export default App;
